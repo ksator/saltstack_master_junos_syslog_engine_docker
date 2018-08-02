@@ -4,4 +4,6 @@ To download the Docker image from the Docker registry, use this command:
 ```
 docker pull ksator/saltstack_master_junos_syslog_engine_docker
 ```
-
+```
+docker images
+```
