@@ -7,6 +7,8 @@ RUN wget -O - https://repo.saltstack.com/apt/ubuntu/16.04/amd64/archive/2018.3.2
 RUN echo 'deb http://repo.saltstack.com/apt/ubuntu/16.04/amd64/archive/2018.3.2 xenial main' > /etc/apt/sources.list.d/saltstack.list
 RUN apt-get update
 RUN apt-get install -y salt-master python-pip nano vim tcpdump 
+RUN apt-get --auto-remove --yes remove python-openssl 
+RUN pip install pyOpenSSL junos-eznc jxmlease jsnapy
 RUN pip install pyparsing twisted 
 RUN pip install requests nose six rt
 
